@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xa.Page1">
+    <StackLayout>
+        <Label Text="Оберіть сторінку:" />
+        <Picker x:Name="pagePicker" Title="Select a Page" SelectedIndexChanged="OnPickerSelectedIndexChanged">
+            <Picker.Items>
+                <x:String>Page2</x:String>
+                <x:String>Page3</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Перейти" Clicked="OnNavigateButtonClicked" />
+    </StackLayout>
+ 
+
+</ContentPage>

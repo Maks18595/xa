@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xa.Page3">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="gameGrid" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text="{Binding Board[0]}" Command="{Binding CellClickCommand}" CommandParameter="0"  Grid.Column="0"/>
+            <Button Text="{Binding Board[1]}" Command="{Binding CellClickCommand}" CommandParameter="1" Grid.Column="1" />
+            <Button Text="{Binding Board[2]}" Command="{Binding CellClickCommand}" CommandParameter="2" Grid.Column="2" />
+
+            <Button Text="{Binding Board[3]}" Command="{Binding CellClickCommand}" CommandParameter="3" Grid.Row="1"  Grid.Column="0"/>
+            <Button Text="{Binding Board[4]}" Command="{Binding CellClickCommand}" CommandParameter="4" Grid.Row="1" Grid.Column="1" />
+            <Button Text="{Binding Board[5]}" Command="{Binding CellClickCommand}" CommandParameter="5" Grid.Row="1" Grid.Column="2" />
+
+            <Button Text="{Binding Board[6]}" Command="{Binding CellClickCommand}" CommandParameter="6" Grid.Row="2"  Grid.Column="0"/>
+            <Button Text="{Binding Board[7]}" Command="{Binding CellClickCommand}" CommandParameter="7" Grid.Row="2" Grid.Column="1" />
+            <Button Text="{Binding Board[8]}" Command="{Binding CellClickCommand}" CommandParameter="8" Grid.Row="2" Grid.Column="2" />
+        </Grid>
+
+        <Label Text="{Binding Result}" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+    </Grid>
+
+</ContentPage>
